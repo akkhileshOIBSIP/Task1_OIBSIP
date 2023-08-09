@@ -1,6 +1,7 @@
 import React from 'react';
 import './App.css';
 import { Screen, Wrapper, Button, ButtonBox } from './components/index';
+import CalcProvider from './components/context/CalcContext';
 
 const App = () => {
 
@@ -13,7 +14,7 @@ const App = () => {
     ];
 
     return (
-        <div>
+        <CalcProvider>
             <Wrapper>
                 <Screen />
                 <ButtonBox>
@@ -25,7 +26,7 @@ const App = () => {
                     ))}
                 </ButtonBox>
             </Wrapper>
-        </div>
+        </CalcProvider>
     );
 };
 
